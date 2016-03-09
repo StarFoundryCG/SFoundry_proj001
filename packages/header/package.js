@@ -2,7 +2,7 @@ Package.describe({
   name: 'charue808:header',
   version: '0.0.1',
   // Brief, one-line summary of the package.
-  summary: '',
+  summary: 'a simple header styled with bootstrap',
   // URL to the Git repository containing the source code for this package.
   git: '',
   // By default, Meteor will default to using README.md for documentation.
@@ -12,8 +12,10 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
-  api.use('ecmascript');
-  api.addFiles('header.js');
+  api.use('templating', 'client');
+  api.use('twbs:bootstrap', 'client', {weak: false, unordered: false});
+  api.addFiles('lib/client/header.html');
+  api.addFiles('lib/client/stylesheets/header-style.css');
 });
 
 Package.onTest(function(api) {
