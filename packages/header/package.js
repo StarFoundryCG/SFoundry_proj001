@@ -14,8 +14,8 @@ Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
   api.use('templating', 'client');
   api.use('twbs:bootstrap', 'client', {weak: false, unordered: false});
-  api.addFiles('lib/client/header.html');
-  api.addFiles('lib/client/stylesheets/header-style.css');
+  api.addFiles('lib/client/header.html', 'client');
+  api.addFiles('lib/client/stylesheets/header-style.css', 'client');
 });
 
 Package.onTest(function(api) {
